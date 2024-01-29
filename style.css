@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #FFFC9B;
+}
+
+header {
+    width: 100%;
+    background: #FFA447;
+    /* height: 15vh; */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+header nav h1 {
+    font-weight: 500;
+
+}
+
+header nav form input {
+    padding: .7rem 2.5rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+::placeholder {
+    font-size: 1.2rem;
+    color: #222;
+
+}
+
+header nav form button {
+    margin-left: 1rem;
+    border: 0;
+    outline: 0;
+    padding: .5rem 1rem;
+    background: #FFDD95;
+    color: black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+header nav form button:hover {
+    border-radius: 15px 0 15px 0;
+}
+
+.recipe-container {
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 1rem;
+    place-items: center;
+
+}
+
+.recipe {
+    box-shadow: 1px 0 20px rgba(255, 124, 48, 0.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 10px;
+    max-width: 350px;
+
+    padding: 10px;
+    background: #fff;
+}
+
+.recipe h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-block: 5px;
+}
+
+.recipe p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #4a4a4a;
+}
+
+.recipe img {
+    width: 100%;
+}
+
+.recipe button {
+    display: block;
+    margin: auto;
+    background: #FFA447;
+    padding: .5rem 1rem;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.recipe-details {
+    position: relative;
+    display: none;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background: #FFA447;
+    -webkit-transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all .5s ease-in-out;
+    overflow: scroll;
+}
+
+.recipe-details button {
+    background: transparent;
+    border: 0;
+}
+
+.recipe-details button .closeImage {
+    width: 3rem;
+    mix-blend-mode: multiply;
+    
+}
+.recipe-closeBtn{
+    margin: 0 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+.recipe-details::-webkit-scrollbar {
+    /* width: 12px; */
+    width: 12px;
+}
+
+.recipe-details::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border-radius: 15px;
+    --webkit-border-radius: 15px;
+}
+
+.recipe-details-content {
+    padding: 0 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.recipe-details-content .recipe-name {
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: none;
+    /* margin-bottom: 5px; */
+    /* margin: 5px 0; */
+}
+
+.recipe-details-content .line-meal {
+    width: 25%;
+    color: black;
+    border: 1px solid black;
+    height: 2px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.recipe-details-content ul {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.recipe-details-content .line-for-ingr {
+    width: 15%;
+    color: black;
+    border: 1px solid black;
+    height: 2px;
+    margin: 1rem 0;
+}
+
+.recipe-details-content h3 {
+    text-align: left;
+    font-weight: 500;
+}
+
+.recipe-details-content ul li {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:600px) {
+    header {
+        width: 100%;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav form {
+        margin-top: 1rem;
+        padding: 0 1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header nav form input {
+        width: 80%;
+    }
+}
